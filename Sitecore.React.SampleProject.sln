@@ -1,0 +1,116 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.React", "..\sitecore.react\src\Sitecore.React\Sitecore.React.csproj", "{A44D104F-02FC-4F13-8F78-C265E861B572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.React.Tests", "..\sitecore.react\src\Sitecore.React.Tests\Sitecore.React.Tests.csproj", "{EC2C5218-7C4E-4010-820B-8F2593E77AE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{8240142A-1C13-4E47-877B-3BDB752CE2D7}"
+	ProjectSection(SolutionItems) = preProject
+		..\sitecore.react\.gitignore = ..\sitecore.react\.gitignore
+		..\sitecore.react\appveyor.yml = ..\sitecore.react\appveyor.yml
+		..\sitecore.react\LICENSE = ..\sitecore.react\LICENSE
+		..\sitecore.react\nuget.config = ..\sitecore.react\nuget.config
+		..\sitecore.react\README.md = ..\sitecore.react\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Module", "Module", "{72C9F2FD-D7ED-4112-9F21-F5E40497D3CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{3C75FAB8-A837-4A80-8CD8-C8D0409E0B52}"
+	ProjectSection(SolutionItems) = preProject
+		..\sitecore.react\build\Sitecore.React.Nuget\Sitecore.React.nuspec = ..\sitecore.react\build\Sitecore.React.Nuget\Sitecore.React.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{D1A0A313-4105-442F-997C-430F3B4F2BB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{8DEB4C53-129B-489E-A329-3EE0184537EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{056C4885-B23A-4CFB-BD99-E00F45AD95E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{AEB3A677-3D01-40B2-8EE5-ABC2CE41BBCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore.React.SourceFiles", "Sitecore.React.SourceFiles", "{04885A64-8700-4341-B40A-E85F18A29794}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{3FBAF600-058D-4A49-9535-6AC61B444054}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{22387100-20A8-4363-AA3F-72AB855098B0}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		appSettings.config = appSettings.config
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
+		LICENSE = LICENSE
+		nuget.config = nuget.config
+		package.json = package.json
+		publishsettings.targets = publishsettings.targets
+		README.md = README.md
+		webpack.config.js = webpack.config.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "React", "React", "{1CA27D76-339C-43E6-9E66-A43BCA5B6487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "React", "src\Project\React\code\React.csproj", "{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "App(1)", "src\App\", "{DCA8383F-A62E-4AF7-B779-B42D95692101}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_43064"
+		Debug.AspNetCompiler.PhysicalPath = "src\App\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_43064\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_43064"
+		Release.AspNetCompiler.PhysicalPath = "src\App\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_43064\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "43064"
+		SlnRelativePath = "src\App\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "React", "React", "{DB032CB2-FDF1-44DB-AC87-18EE2C24052C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A44D104F-02FC-4F13-8F78-C265E861B572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44D104F-02FC-4F13-8F78-C265E861B572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44D104F-02FC-4F13-8F78-C265E861B572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44D104F-02FC-4F13-8F78-C265E861B572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC2C5218-7C4E-4010-820B-8F2593E77AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC2C5218-7C4E-4010-820B-8F2593E77AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC2C5218-7C4E-4010-820B-8F2593E77AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC2C5218-7C4E-4010-820B-8F2593E77AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A44D104F-02FC-4F13-8F78-C265E861B572} = {72C9F2FD-D7ED-4112-9F21-F5E40497D3CD}
+		{EC2C5218-7C4E-4010-820B-8F2593E77AE3} = {72C9F2FD-D7ED-4112-9F21-F5E40497D3CD}
+		{8240142A-1C13-4E47-877B-3BDB752CE2D7} = {04885A64-8700-4341-B40A-E85F18A29794}
+		{72C9F2FD-D7ED-4112-9F21-F5E40497D3CD} = {04885A64-8700-4341-B40A-E85F18A29794}
+		{3C75FAB8-A837-4A80-8CD8-C8D0409E0B52} = {04885A64-8700-4341-B40A-E85F18A29794}
+		{1CA27D76-339C-43E6-9E66-A43BCA5B6487} = {056C4885-B23A-4CFB-BD99-E00F45AD95E9}
+		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED} = {1CA27D76-339C-43E6-9E66-A43BCA5B6487}
+		{DCA8383F-A62E-4AF7-B779-B42D95692101} = {AEB3A677-3D01-40B2-8EE5-ABC2CE41BBCC}
+		{DB032CB2-FDF1-44DB-AC87-18EE2C24052C} = {8DEB4C53-129B-489E-A329-3EE0184537EF}
+	EndGlobalSection
+EndGlobal

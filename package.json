@@ -1,0 +1,49 @@
+{
+  "name": "sitecore.react.project",
+  "version": "1.0.0",
+  "description": "A sample Sitecore.React module project",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "history": "^1.17.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-router": "^1.0.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src/App --inline --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuitarRich/sitecore.react.project.git"
+  },
+  "keywords": [
+    "Sitecore",
+    "React"
+  ],
+  "author": "Richard Seal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GuitarRich/sitecore.react.project/issues"
+  },
+  "homepage": "https://github.com/GuitarRich/sitecore.react.project#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "modernizr": "^3.5.0",
+    "prop-types": "^15.5.8",
+    "react-router": "^1.0.3",
+    "sitecore.react.placeholders": "^1.0.7"
+  }
+}
