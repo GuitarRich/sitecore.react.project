@@ -1,7 +1,7 @@
 import React from "react";
-import Placeholder from "./../../Test/Placeholders";
+import Placeholder from "sitecore.react.placeholders";
 
-import { DummyData } from "./../../data/DummyData";
+import { Data } from "./../../data/Data";
 import Logo from "./../Identity/Logo"
 import PrimaryMenu from "./../Navigation/PrimaryMenu";
 import ActivityNavigation from "./../Navigation/ActivityNavigation";
@@ -20,12 +20,12 @@ export default class Navbar extends React.Component {
                         </button>
 
                         <Placeholder key={'navbar-left'}>
-                            <Logo HomeUrl="/" LogoImage={'<img src="http://habitat.demo.sitecore.net/-/media/Habitat/Images/Logo/Habitat.png?h=50&amp;la=en&amp;mh=50&amp;w=200&amp;hash=6D917968B80F4E41CB1D1040DCEBB260AAD233BB" alt="Habitat Logo" width="200" height="50" DisableWebEdit="False" />'} />
+                            <Logo data={Data.getLogo()} />
                         </Placeholder>
                     </div>
                     <div class="navbar-center">
                         <Placeholder key={'navbar-center'}>
-                            <PrimaryMenu data={DummyData.getPrimaryNav()} />
+                            <PrimaryMenu data={Data.getPrimaryNav()} />
                         </Placeholder>
                     </div>
                     <div class="navbar-right">

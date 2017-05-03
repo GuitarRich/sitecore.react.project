@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import Placeholder from "./../Test/Placeholders";
+import Placeholder from "sitecore.react.placeholders";
 
 import HeaderTop from "./Sublayouts/HeaderTop";
 import Navbar from "./Sublayouts/Navbar";
@@ -8,10 +8,10 @@ class Header extends React.Component {
     render() {
         return (
             <header class="header-static">
-                <Placeholder key={'header-top'}>
+                <Placeholder placeholderKey={'header-top'}>
                     <HeaderTop />
                 </Placeholder>
-                <Placeholder key={'navbar'}>
+                <Placeholder placeholderKey={'navbar'}>
                     <Navbar />
                 </Placeholder>
             </header>

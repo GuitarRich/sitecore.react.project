@@ -29,13 +29,12 @@ export default class PrimaryMenu extends React.Component {
     renderParentWithChildren(item, index) {
         return (
             <li class="dropdown" key={index}>
-                <div class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" target={item.Target}>
+                <a class="dropdown-toggle text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" target={item.Target}>
                     {item.Title}<span class="caret"></span>
-
-                    <ul class="dropdown-menu">
-                        {this.renderMenuItems(item.Children)}
-                    </ul>
-                </div>
+                </a>
+                <ul class="dropdown-menu">
+                    {this.renderMenuItems(item.Children)}
+                </ul>
             </li>
         );
     }

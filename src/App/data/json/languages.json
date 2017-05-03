@@ -1,0 +1,7 @@
+{
+    "CurrentLanguage": "en",
+    "Languages": [
+        { "Url": "http://habitat.demo.sitecore.net/en/", "NativeName": "English", "TwoLetterCode": "en" },
+        { "Url": "http://habitat.demo.sitecore.net/da/", "NativeName": "dansk", "TwoLetterCode": "da" }
+    ]
+}

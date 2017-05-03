@@ -6,7 +6,7 @@ export default class GlobalSearch extends React.Component {
             <li class="navbar-activity-search">
                 <form action={this.props.data.SearchResultsUrl} class="navbar-form" role="search">
                     <div class="form-group">
-                        <input type="text" name="query" placeholder={this.props.data.SearchBoxTitle} autocomplete="off" />
+                        <input type="text" name="query" placeholder={this.props.data.SearchBoxTitle} autoComplete="off" />
                     </div>
                 </form>
 

@@ -1,0 +1,41 @@
+{
+    "Items": [
+        {
+            "Url": "/#/",
+            "Target": "",
+            "Title": "Home",
+            "Children": []
+        },
+        {
+            "Url": "/#/about-react",
+            "Target": "",
+            "Title": "About React",
+            "Children": [
+                {
+                    "Url": "/#/about-react/introduction",
+                    "Target": "",
+                    "Title": "Introduction",
+                    "Children": []
+                },
+                {
+                    "Url": "/#/about-react/getting-started",
+                    "Target": "",
+                    "Title": "Getting Started",
+                    "Children": []
+                },
+                {
+                    "Url": "https://github.com/GuitarRich/sitecore.react",
+                    "Target": "_blank",
+                    "Title": "Git-Hub Repo",
+                    "Children": []
+                }
+            ]
+        },
+        {
+            "Url": "/#/settings",
+            "Target": "",
+            "Title": "Settings",
+            "Children": []
+        }
+    ]
+}

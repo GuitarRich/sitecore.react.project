@@ -1,0 +1,24 @@
+{
+    "IsExperienceEditor": false,
+    "CarouselId": "#carousel23e46ca27ffc48cdbaf361618e3de520",
+    "Slides" : [
+        {
+            "Active": "active",
+            "ImageUrl": "/static/images/habitat-001-wide.jpg",
+            "Title": "Extensibility",
+            "Description": "Add new features, simply and without a steep learning curve"
+        },
+        {
+            "Active": "",
+            "ImageUrl": "/static/images/habitat-007-wide.jpg",
+            "Title": "Flexibility",
+            "Description": "Change and add quickly and without worry"
+        },
+        {
+            "Active": "",
+            "ImageUrl": "/static/images/habitat-071-wide.jpg",
+            "Title": "Simplicity",
+            "Description": "A consistent and discoverable architecture"
+        }
+    ]
+}

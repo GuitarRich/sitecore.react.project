@@ -1,0 +1,28 @@
+{
+    "Url": "/#/about-react/introduction",
+    "Target": "",
+    "NavigationTitle": "About Sitecore React",
+    "Items": [
+        {
+            "IsActive": true,
+            "Url": "/#/about-react/introduction",
+            "Target": "",
+            "NavigationTitle": "Introduction",
+            "Children": []
+        },
+        {
+            "IsActive": false,
+            "Url": "/#/about-react/getting-started",
+            "Target": "",
+            "NavigationTitle": "Getting Started",
+            "Children": []
+        },
+        {
+            "IsActive": false,
+            "Url": "https://github.com/GuitarRich/sitecore.react",
+            "Target": "_blank",
+            "NavigationTitle": "Git-Hub Repo",
+            "Children": []
+        }
+    ]
+}

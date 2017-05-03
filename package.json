@@ -16,9 +16,12 @@
     "history": "^1.17.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
+    "react-bootstrap": "^0.31.0",
     "react-router": "^1.0.3",
+    "react-router-dom": "^4.1.1",
     "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "sitecore.react.placeholders": "^1.0.8"
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src/App --inline --hot"
@@ -41,9 +44,12 @@
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
+    "json-loader": "^0.5.4",
     "modernizr": "^3.5.0",
     "prop-types": "^15.5.8",
+    "react-bootstrap": "^0.31.0",
     "react-router": "^1.0.3",
-    "sitecore.react.placeholders": "^1.0.7"
+    "react-router-dom": "^4.1.1",
+    "sitecore.react.placeholders": "^1.0.8"
   }
 }
