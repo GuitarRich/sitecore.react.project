@@ -29,8 +29,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{056C4885-B23A-4CFB-BD99-E00F45AD95E9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{AEB3A677-3D01-40B2-8EE5-ABC2CE41BBCC}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore.React.SourceFiles", "Sitecore.React.SourceFiles", "{04885A64-8700-4341-B40A-E85F18A29794}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{3FBAF600-058D-4A49-9535-6AC61B444054}"
@@ -51,30 +49,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "React", "React", "{1CA27D76-339C-43E6-9E66-A43BCA5B6487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "React", "src\Project\React\code\React.csproj", "{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "App(1)", "src\App\", "{DCA8383F-A62E-4AF7-B779-B42D95692101}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_43064"
-		Debug.AspNetCompiler.PhysicalPath = "src\App\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_43064\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_43064"
-		Release.AspNetCompiler.PhysicalPath = "src\App\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_43064\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "43064"
-		SlnRelativePath = "src\App\"
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.React.SampleProject.Website", "src\Project\React\code\Sitecore.React.SampleProject.Website.csproj", "{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "React", "React", "{DB032CB2-FDF1-44DB-AC87-18EE2C24052C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{CD950339-545B-44FA-BA21-767FBCAEDA5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.Identity", "src\Feature\Identity\code\Sitecore.Feature.Identity.csproj", "{0D0B809C-03AB-4EE1-898F-CFE28CF5B245}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orm", "Orm", "{729D3258-09A4-44E2-AE72-D17EB4890AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Foundation.Orm", "src\Foundation\Orm\code\Sitecore.Foundation.Orm.csproj", "{80213F24-577F-4F0B-A3B8-62485EA4D2F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{BCFC55FE-4632-4B6A-A7B8-38FCD1BD41C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Foundation.Web", "src\Foundation\Web\code\Sitecore.Foundation.Web.csproj", "{A0DA2A44-CC4B-424C-AA1B-1276F8FF1E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,10 +83,18 @@ Global
 		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCA8383F-A62E-4AF7-B779-B42D95692101}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0D0B809C-03AB-4EE1-898F-CFE28CF5B245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0B809C-03AB-4EE1-898F-CFE28CF5B245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0B809C-03AB-4EE1-898F-CFE28CF5B245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0B809C-03AB-4EE1-898F-CFE28CF5B245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80213F24-577F-4F0B-A3B8-62485EA4D2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80213F24-577F-4F0B-A3B8-62485EA4D2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80213F24-577F-4F0B-A3B8-62485EA4D2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80213F24-577F-4F0B-A3B8-62485EA4D2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DA2A44-CC4B-424C-AA1B-1276F8FF1E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DA2A44-CC4B-424C-AA1B-1276F8FF1E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DA2A44-CC4B-424C-AA1B-1276F8FF1E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DA2A44-CC4B-424C-AA1B-1276F8FF1E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,7 +107,12 @@ Global
 		{3C75FAB8-A837-4A80-8CD8-C8D0409E0B52} = {04885A64-8700-4341-B40A-E85F18A29794}
 		{1CA27D76-339C-43E6-9E66-A43BCA5B6487} = {056C4885-B23A-4CFB-BD99-E00F45AD95E9}
 		{9FCFBFE6-0670-46D7-A11C-CA7ED370C4ED} = {1CA27D76-339C-43E6-9E66-A43BCA5B6487}
-		{DCA8383F-A62E-4AF7-B779-B42D95692101} = {AEB3A677-3D01-40B2-8EE5-ABC2CE41BBCC}
 		{DB032CB2-FDF1-44DB-AC87-18EE2C24052C} = {8DEB4C53-129B-489E-A329-3EE0184537EF}
+		{CD950339-545B-44FA-BA21-767FBCAEDA5A} = {D1A0A313-4105-442F-997C-430F3B4F2BB8}
+		{0D0B809C-03AB-4EE1-898F-CFE28CF5B245} = {CD950339-545B-44FA-BA21-767FBCAEDA5A}
+		{729D3258-09A4-44E2-AE72-D17EB4890AD2} = {8DEB4C53-129B-489E-A329-3EE0184537EF}
+		{80213F24-577F-4F0B-A3B8-62485EA4D2F3} = {729D3258-09A4-44E2-AE72-D17EB4890AD2}
+		{BCFC55FE-4632-4B6A-A7B8-38FCD1BD41C7} = {8DEB4C53-129B-489E-A329-3EE0184537EF}
+		{A0DA2A44-CC4B-424C-AA1B-1276F8FF1E0F} = {BCFC55FE-4632-4B6A-A7B8-38FCD1BD41C7}
 	EndGlobalSection
 EndGlobal

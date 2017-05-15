@@ -1,0 +1,44 @@
+﻿@using Sitecore.Feature.Identity
+@using Sitecore.Feature.Identity.Repositories
+@using Sitecore.Foundation.Dictionary.Extensions
+@using Sitecore.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.Foundation.Theming.Extensions
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+@{
+  var identity = IdentityRepository.Get(Model.Item);
+  if (identity == null)
+  {
+    return;
+  }
+}
+
+<div class="well @Model.Rendering.GetBackgroundClass()">
+  <h4>@Html.Sitecore().Dictionary("/identity/contact information/title", "Contact information")</h4>
+
+  <address>
+    <p>
+      @if (Sitecore.Context.PageMode.IsExperienceEditor || identity.FieldHasValue(Templates.Identity.Fields.OrganisationName))
+      {
+        <strong>@Html.Sitecore().Field(Templates.Identity.Fields.OrganisationName, identity)</strong>
+      }
+      <br/>
+      @Html.Sitecore().Field(Templates.Identity.Fields.OrganisationAddress, identity, new
+                                                                                      {
+                                                                                        linebreaks = "<br/>"
+                                                                                      })
+    </p>
+    <p>
+      @if (Sitecore.Context.PageMode.IsExperienceEditor || identity.FieldHasValue(Templates.Identity.Fields.OrganisationPhone))
+      {
+        <br />
+        <i class="fa fa-phone"></i> @Html.Sitecore().Field(Templates.Identity.Fields.OrganisationPhone, identity)
+      }
+      @if (Sitecore.Context.PageMode.IsExperienceEditor || identity.FieldHasValue(Templates.Identity.Fields.OrganisationEmail))
+      {
+        <br />
+        <i class="fa fa-envelope"></i> @Html.Sitecore().Field(Templates.Identity.Fields.OrganisationEmail, identity)
+      }
+    </p>
+  </address>
+</div>

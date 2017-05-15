@@ -1,5 +1,5 @@
 module.exports = function() {
-    var instanceRoot = "C:\\websites\\sitecorereact.dev.local";
+    var instanceRoot = "C:\\inetpub\\wwwroot\\sitecorereact";
     var config = {
         websiteRoot: instanceRoot + "\\Website",
         sitecoreLibraries: instanceRoot + "\\Website\\bin",

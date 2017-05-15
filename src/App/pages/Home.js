@@ -1,7 +1,7 @@
 import React from "react";
 
-import PageHeaderCarousel from "./../components/Media/PageHeaderCarousel";
-import PageHeader from "./../components/Sublayouts/PageHeader";
+import PageHeaderCarousel from "./../views/Media/PageHeaderCarousel";
+import PageHeader from "./../views/Sublayouts/PageHeader";
 import { Data } from "./../data/Data";
 
 export default class Home extends React.Component {

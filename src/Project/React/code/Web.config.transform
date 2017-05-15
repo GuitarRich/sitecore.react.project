@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<configuration  xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+    <runtime xdt:Transform="InsertIfMissing">
+        <assemblyBinding xdt:Transform="InsertIfMissing">
+            <dependentAssembly>
+                <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral"  xdt:Transform="InsertIfMissing"/>
+                <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0"  xdt:Transform="InsertIfMissing" />
+            </dependentAssembly>
+            <dependentAssembly>
+                <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral" xdt:Transform="InsertIfMissing" />
+                <bindingRedirect oldVersion="0.0.0.0-1.6.5135.21930" newVersion="1.6.5135.21930" xdt:Transform="InsertIfMissing"/>
+            </dependentAssembly>
+            <dependentAssembly>
+                <assemblyIdentity name="React.Core" publicKeyToken="9aed67b161f7db78" culture="neutral" xdt:Transform="InsertIfMissing"/>
+                <bindingRedirect oldVersion="0.0.0.0-3.0.1.0" newVersion="3.0.1.0" xdt:Transform="InsertIfMissing"/>
+            </dependentAssembly>
+        </assemblyBinding>
+    </runtime>
+</configuration>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Article from "../components/Article";
+import Article from "../views/Article";
 
 export default class Featured extends React.Component {
   render() {

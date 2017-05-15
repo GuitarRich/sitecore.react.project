@@ -67,7 +67,7 @@ gulp.task("04-Apply-Xml-Transform", function() {
                     stdout: true,
                     errorOnFail: true,
                     maxcpucount: 0,
-                    toolsVersion: 14.0,
+                    toolsVersion: 15.0,
                     properties: {
                         WebConfigToTransform: config.websiteRoot,
                         TransformFile: file.path,
@@ -124,7 +124,7 @@ var publishStream = function(stream, dest) {
             stdout: true,
             errorOnFail: true,
             maxcpucount: 0,
-            toolsVersion: 14.0,
+            toolsVersion: 15.0,
             properties: {
                 DeployOnBuild: "true",
                 DeployDefaultTarget: "WebPublish",
@@ -171,7 +171,7 @@ gulp.task("Build-Solution", function() {
             stdout: true,
             errorOnFail: true,
             maxcpucount: 0,
-            toolsVersion: 14.0
+            toolsVersion: 15.0
         }));
 });
 
@@ -213,6 +213,23 @@ gulp.task("Publish-All-Views", function() {
     var destination = config.websiteRoot + "\\Views";
     return gulp.src(roots, { base: root }).pipe(
         foreach(function(stream, file) {
+            console.log("Publishing from " + file.path);
+            gulp.src(file.path + files, { base: file.path })
+                .pipe(newer(destination))
+                .pipe(debug({ title: "Copying " }))
+                .pipe(gulp.dest(destination));
+            return stream;
+        })
+    );
+});
+
+gulp.task("Publish-All-JSX", function () {
+    var root = "./src";
+    var roots = [root + "/**/App", "!" + root + "/**/obj/**/Views", "!" + root + "/**/App/data", "!" + root + "/**/App/pages"];
+    var files = "/**/*.js";
+    var destination = config.websiteRoot;
+    return gulp.src(roots, { base: root }).pipe(
+        foreach(function (stream, file) {
             console.log("Publishing from " + file.path);
             gulp.src(file.path + files, { base: file.path })
                 .pipe(newer(destination))

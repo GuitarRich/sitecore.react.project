@@ -1,10 +1,10 @@
 import React from "react";
-import TwoColumn48 from "./../components/Sublayouts/TwoColumn48";
-import PageHeaderCarousel from "./../components/Media/PageHeaderCarousel";
-import PageImageHeader from "./../components/PageContent/PageImageHeader";
-import PageTitle from "./../components/PageContent/PageTitle";
-import PageBody from "./../components/PageContent/PageBody";
-import SecondaryMenu from "./../components/Navigation/SecondaryMenu";
+import TwoColumn48 from "./../views/Sublayouts/TwoColumn48";
+import PageHeaderCarousel from "./../views/Media/PageHeaderCarousel";
+import PageImageHeader from "./../views/PageContent/PageImageHeader";
+import PageTitle from "./../views/PageContent/PageTitle";
+import PageBody from "./../views/PageContent/PageBody";
+import SecondaryMenu from "./../views/Navigation/SecondaryMenu";
 import { Data } from "./../data/Data";
 
 export default class AboutReactGettingStarted extends React.Component {
