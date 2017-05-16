@@ -1,12 +1,12 @@
-import React from "react";
-import Placeholder from "sitecore.react.placeholders";
+var React = require("react");
+var Placeholder = require("./../placeholders/Placeholder");
 
-import { Data } from "./../../data/Data";
-import Logo from "./../Identity/Logo"
-import PrimaryMenu from "./../Navigation/PrimaryMenu";
-import ActivityNavigation from "./../Navigation/ActivityNavigation";
+var Data = require("./../../data/Data").Data;
+var Logo = require("./../Identity/Logo");
+var PrimaryMenu = require("./../Navigation/PrimaryMenu");
+var ActivityNavigation = require("./../Navigation/ActivityNavigation");
 
-export default class Navbar extends React.Component {
+var Navbar = React.createClass({
     render() {
         return (
             <nav class="navbar navbar-default navbar-static" id="mainNavbar">
@@ -19,17 +19,17 @@ export default class Navbar extends React.Component {
                             <span class="icon-bar"></span>
                         </button>
 
-                        <Placeholder key={'navbar-left'}>
+                        <Placeholder placeholderKey={'navbar-left'}>
                             <Logo data={Data.getLogo()} />
                         </Placeholder>
                     </div>
                     <div class="navbar-center">
-                        <Placeholder key={'navbar-center'}>
+                        <Placeholder placeholderKey={'navbar-center'}>
                             <PrimaryMenu data={Data.getPrimaryNav()} />
                         </Placeholder>
                     </div>
                     <div class="navbar-right">
-                        <Placeholder key={'navbar-right'}>
+                        <Placeholder placeholderKey={'navbar-right'}>
                             <ActivityNavigation />
                         </Placeholder>
                     </div>
@@ -37,4 +37,6 @@ export default class Navbar extends React.Component {
             </nav>
         );
     }
-}
+});
+
+module.exports = Navbar;

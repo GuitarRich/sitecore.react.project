@@ -1,6 +1,6 @@
-import React from "react";
+var React = require("react");
 
-class PageHeaderCarousel extends React.Component {
+var PageHeaderCarousel = React.createClass({
     renderIndicators(slides, carouselId) {
 
         let indicators = [];
@@ -12,7 +12,7 @@ class PageHeaderCarousel extends React.Component {
         });
 
         return indicators;
-    }
+    },
     renderSlides(items) {
         let slides = [];
         let self = this;
@@ -36,7 +36,7 @@ class PageHeaderCarousel extends React.Component {
             );
         });
         return slides;
-    }
+    },
     render() {
 
         let dataInterval = this.props.data.IsExperienceEditor ? "data-interval" : "";
@@ -62,6 +62,6 @@ class PageHeaderCarousel extends React.Component {
             </div>
         );
     }
-};
+});
 
-export default PageHeaderCarousel;
+module.exports = PageHeaderCarousel;

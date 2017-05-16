@@ -1,6 +1,6 @@
-import React from 'react';
+var React = require("react");
 
-export default class GlobalSearch extends React.Component {
+var GlobalSearch = React.createClass({
     render() {
         return (
             <li class="navbar-activity-search">
@@ -16,4 +16,6 @@ export default class GlobalSearch extends React.Component {
             </li>
         );
     }
-}
+});
+
+module.exports = GlobalSearch;

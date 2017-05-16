@@ -1,11 +1,11 @@
-import React from "react"
-import Placeholder from "sitecore.react.placeholders";
+var React = require("react");
+var Placeholder = require("./../placeholders/Placeholder");
 
-import { Data } from "./../../data/Data";
-import LanguageSelector from "./../Language/LanguageSelector";
-import GlobalSearch from "./../Search/GlobalSearch";
+var Data = require("./../../data/Data").Data;
+var LanguageSelector = require("./../Language/LanguageSelector");
+var GlobalSearch = require("./../Search/GlobalSearch");
 
-export default class ActivityNavigation extends React.Component {
+var ActivityNavigation = React.createClass({
     render() {
         return(
             <div class="navbar-activity">
@@ -22,4 +22,6 @@ export default class ActivityNavigation extends React.Component {
             </div>
         );
     }
-}
+});
+
+module.exports = ActivityNavigation;

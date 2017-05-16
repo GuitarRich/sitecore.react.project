@@ -1,6 +1,6 @@
-import React from "react";
+var React = require("react");
 
-export default class PrimaryMenu extends React.Component {
+var PrimaryMenu = React.createClass({
     renderMenuItems(items){
         if (!items) {
             return;
@@ -18,14 +18,14 @@ export default class PrimaryMenu extends React.Component {
         });
 
         return menu;
-    }
+    },
     renderParentNoChildren(item, index) {
         return (
             <li class="" key={index}>
                 <a class="text-uppercase" href={item.Url} target={item.Target} dangerouslySetInnerHTML={{ __html: item.Title }} ></a>
             </li>
         );
-    }
+    },
     renderParentWithChildren(item, index) {
         return (
             <li class="dropdown" key={index}>
@@ -37,7 +37,7 @@ export default class PrimaryMenu extends React.Component {
                 </ul>
             </li>
         );
-    }
+    },
     render() {
 
         var navigation = this.renderMenuItems(this.props.data.Items);
@@ -50,4 +50,6 @@ export default class PrimaryMenu extends React.Component {
             </div>
         );
     }
-}
+});
+
+module.exports = PrimaryMenu;

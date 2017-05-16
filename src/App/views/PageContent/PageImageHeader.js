@@ -1,7 +1,7 @@
-import React from "react";
-import Placeholder from "sitecore.react.placeholders";
+var React = require("react");
+var Placeholder = require("./../placeholders/Placeholder");
 
-export default class PageImageHeader extends React.Component {
+var PageImageHeader = React.createClass({
     render() {
         let backgroundImage = { backgroundImage: "url('" + this.props.data.ImageUrl + "')" };
 
@@ -11,4 +11,6 @@ export default class PageImageHeader extends React.Component {
             </header>
         );
     }
-}
+});
+
+module.exports = PageImageHeader;

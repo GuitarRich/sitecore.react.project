@@ -1,6 +1,6 @@
-import React from 'react';
+var React = require("react");
 
-export default class LanguageSelector extends React.Component {
+var LanguageSelector = React.createClass({
     render() {
 
         var self = this;
@@ -28,4 +28,6 @@ export default class LanguageSelector extends React.Component {
             </li>
         );
     }
-}
+});
+
+module.exports = LanguageSelector;

@@ -1,6 +1,6 @@
-import React from "react";
+var React = require("react");
 
-export default class SecondaryMenu extends React.Component {
+var SecondaryMenu = React.createClass({
     renderChildren(children) {
         let self = this;
         if (children.length <= 0) {
@@ -19,7 +19,7 @@ export default class SecondaryMenu extends React.Component {
         });
 
         return menuItem;
-    }
+    },
     render() {
         return (
             <div>
@@ -34,5 +34,6 @@ export default class SecondaryMenu extends React.Component {
             </div>
         );
     }
+});
 
-}
+module.exports = SecondaryMenu;

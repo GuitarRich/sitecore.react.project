@@ -1,7 +1,8 @@
-import React from "react";
-import Placeholder from "sitecore.react.placeholders";
+var React = require("react");
+var Placeholder = require("./../placeholders/Placeholder");
 
-export default class PageHeader extends React.Component {
+
+var PageHeader = React.createClass({
     render() {
         return (
             <header class="page-header">
@@ -9,4 +10,6 @@ export default class PageHeader extends React.Component {
             </header>
         );
     }
-}
+});
+
+module.exports = PageHeader;

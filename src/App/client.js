@@ -2,10 +2,7 @@
 global.jQuery = require('jquery');
 require('bootstrap');
 require('jquery-ui');
+var React = require('react');
+require('react-dom');
 
-module.exports ={
-    Placeholder: require('sitecore.react.placeholders'),
-    Placeholder2: require('./Test/Placeholders2'),
-    Layout: require('./views/Layout/Layout')
-}
-
+var Components = require('expose?Components!./views');

@@ -7,7 +7,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, hashHistory, browserHistory } from "react-router"
 
-import Layout from "./views/Layout/Layout";
+import Layout from "./views/layout/MainLayout";
 import Home from "./pages/Home"
 import Featured from "./pages/Featured"
 import Settings from "./pages/Settings";

@@ -1,10 +1,10 @@
-import React from "react";
-import Placeholder from "sitecore.react.placeholders";
+var React = require("react");
+var Placeholder = require("./../placeholders/Placeholder");
 
-import { Data } from "./../../data/Data";
-import LinkMenu from "./../Navigation/LinkMenu"
+var Data = require("./../../data/Data").Data;
+var LinkMenu  = require("./../Navigation/LinkMenu");
 
-export default class HeaderTop extends React.Component {
+var HeaderTop = React.createClass({
     render() {
         return (
             <div class="header-top">
@@ -27,4 +27,6 @@ export default class HeaderTop extends React.Component {
             </div>
         );
     }
-};
+});
+
+module.exports = HeaderTop;

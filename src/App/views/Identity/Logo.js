@@ -1,6 +1,6 @@
-import React from "react";
+var React = require("react");
 
-export default class Logo extends React.Component {
+var Logo = React.createClass({
     render() {
         return (
             <a class="navbar-brand" href={this.props.data.HomeUrl}>
@@ -8,4 +8,6 @@ export default class Logo extends React.Component {
             </a>
         );
     }
-}
+});
+
+module.exports = Logo;

@@ -1,7 +1,7 @@
-import React from "react";
-import Placeholder from "sitecore.react.placeholders";
+var React = require("react");
+var Placeholder = require("./../placeholders/Placeholder");
 
-export default class OneColumn extends React.Component {
+var OneColumn = React.createClass({
     render() {
         return (
             <div class="container">
@@ -13,4 +13,6 @@ export default class OneColumn extends React.Component {
             </div>
         );
     }
-}
+});
+
+module.exports = OneColumn;

@@ -1,6 +1,6 @@
-import React from "react";
+var React = require("react");
 
-export default class PageTitle extends React.Component {
+var PageTitle = React.createClass({
     render() {
         return (
             <header>
@@ -9,4 +9,6 @@ export default class PageTitle extends React.Component {
             </header>
         );
     }
-}
+});
+
+module.exports = PageTitle;

@@ -1,10 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+var React = require("react");
+var PropTypes = require('prop-types');
 
-class Placeholder2 extends React.Component {
+var Placeholder = React.createClass({
+    defaultProps: {
+        placeholderKey: 'not set',
+        isDynamic: false
+    },
     componentDidMount() {
         // some logic here - we only test if the method is called
-    }
+    },
     render() {
         let self = this;
 
@@ -13,17 +17,26 @@ class Placeholder2 extends React.Component {
         // any of the static front end code in the file.
         //
         // TODO: Workout Dynamic Placholders here.... they will have a guid
-        // if (this.props.hasOwnProperty('placeholder')){
-        //     if (this.props.isDynamic) {
-        //         return (
-        //             <div>{this.props.placeholder.$Id[this.props.placeholderKey]}</div>    
-        //         )
-        //     }
+        if (this.props.hasOwnProperty('placeholder')){
+            return this.renderSitecore();
+        } else {
+            return this.renderFED();
+        }
+    },
+    renderSitecore() {
+        let self = this;
+        if (this.props.isDynamic) {
+            return (
+                <div>{this.props.placeholder.$Id[this.props.placeholderKey]}</div>    
+            )
+        }
 
-        //     return (
-        //         <div>{this.props.placeholder[this.props.placeholderKey]}</div>
-        //     );
-        // }
+        return (
+            <div>{this.props.placeholder[this.props.placeholderKey]}</div>
+        );
+    },
+    renderFED() {
+        let self = this;
 
         if (this.props.content) {
             let content = [];
@@ -50,18 +63,25 @@ class Placeholder2 extends React.Component {
                 );
             }
 
-            return (null);
+            return ( <h2>No Content</h2> );
         }
         if (this.props.children) {
-            var content = [];
-            React.Children.map(this.props.children, (child, i) => {
-                if (child.props.placeholderKey == self.props.placeholderKey) {
-                    content.push(child);
-                }
-            });
+            let content = [];
+            if (React.Children.count(this.props.children) > 0) {
+                content = React.Children.map(this.props.children, (child, i) => {
+                    if (child.props.hasOwnProperty('placeholderKey'))
+                    {
+                        if (child.props.placeholderKey == self.props.placeholderKey) {
+                            return child;
+                        }
+                    }
+                });
+            }
 
             if (content.length > 0) {
-                return content;
+                return (
+                    <div>{content}</div>
+                );
             }
 
             return this.props.children;
@@ -71,15 +91,6 @@ class Placeholder2 extends React.Component {
             <h2>No content</h2>
         )
     }
-}
+});
 
-Placeholder2.contextTypes = {
-    placeholder: PropTypes.array
-};
-
-Placeholder2.defaultProps = {
-    placeholderKey: 'not set',
-    isDynamic: false
-};
-
-export default Placeholder2;
+module.exports = Placeholder;

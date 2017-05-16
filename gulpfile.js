@@ -15,6 +15,7 @@ var fs = require('fs');
 var unicorn = require("./scripts/unicorn.js");
 var habitat = require("./scripts/habitat.js");
 var yargs = require("yargs").argv;
+var webpack = require('webpack-stream');
 
 module.exports.config = config;
 
@@ -223,10 +224,35 @@ gulp.task("Publish-All-Views", function() {
     );
 });
 
+gulp.task("Run-Webpack", function () {
+    var files = ["./src/app/fed.js", "./src/app/client.js", "./src/app/server.js"];
+
+    return gulp.src(files)
+        .pipe(webpack( require("./webpack.config.js") ))
+        .pipe(gulp.dest("dist/"));
+});
+
 gulp.task("Publish-All-JSX", function () {
     var root = "./src";
     var roots = [root + "/**/App", "!" + root + "/**/obj/**/Views", "!" + root + "/**/App/data", "!" + root + "/**/App/pages"];
-    var files = "/**/*.js";
+    var files = "/**/*.jsx";
+    var destination = config.websiteRoot;
+    return gulp.src(roots, { base: root }).pipe(
+        foreach(function (stream, file) {
+            console.log("Publishing from " + file.path);
+            gulp.src(file.path + files, { base: file.path })
+                .pipe(newer(destination))
+                .pipe(debug({ title: "Copying " }))
+                .pipe(gulp.dest(destination));
+            return stream;
+        })
+    );
+});
+
+gulp.task("Publish-All-JS", function () {
+    var root = "./src";
+    var roots = [root + "/**/App"];
+    var files = "/*.min.js";
     var destination = config.websiteRoot;
     return gulp.src(roots, { base: root }).pipe(
         foreach(function (stream, file) {

@@ -6,9 +6,9 @@ namespace Sitecore.React.SampleProject.Website.Controllers
     public class LayoutController : Controller
     {
         // GET: Layout
-        public ActionResult Layout()
+        public ActionResult MainLayout()
         {
-            return this.React("Layout");
+            return this.React("MainLayout");
         }
     }
 }

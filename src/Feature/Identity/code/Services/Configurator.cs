@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
-using Sitecore.Foundation.Web.DependencyInjection;
 
 namespace Sitecore.Feature.Identity.Services
 {

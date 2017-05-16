@@ -1,6 +1,6 @@
-import React from 'react';
+var React = require("react");
 
-class LinkMenu extends React.Component {
+var LinkMenu = React.createClass({
     render() {
         var self = this;
 
@@ -42,6 +42,6 @@ class LinkMenu extends React.Component {
             </nav>
         );
     }
-}
+});
 
-export default LinkMenu;
+module.exports = LinkMenu;
