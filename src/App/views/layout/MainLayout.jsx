@@ -1,6 +1,8 @@
 var React = require("react");
 var Placeholder = require("./../placeholders/Placeholder");
 var HeaderTop = require("./../Sublayouts/HeaderTop");
+var Navbar = require("./../Sublayouts/Navbar");
+
 
 var MainLayout = React.createClass({
     render() {
@@ -10,17 +12,21 @@ var MainLayout = React.createClass({
                     <Placeholder placeholderKey={'header-top'} placeholder={this.props.placeholder}>
                         <HeaderTop />
                     </Placeholder>
+                    <Placeholder placeholderKey={'navbar'} placeholder={this.props.placeholder}>
+                        <Navbar />
+                    </Placeholder>
                 </header>
 
                 <main role="main">
-                    <div>
-                        <h2>body</h2>
-                        <p>body text, body text, body text, body text, body text, body text, body text, body text, body text, body text, body text</p>
-                    </div>
+                    <Placeholder placeholderKey={'main'} placeholder={this.props.placeholder}>
+                        {this.props.children}
+                    </Placeholder>
                 </main>
 
                 <footer class="bg-dark">
-                    <h3>todo: add footer</h3>
+                    <Placeholder placeholderKey={'footer'} placeholder={this.props.placeholder}>
+                        <p>todo: add footer</p>
+                    </Placeholder>
                 </footer>
             </div>
         );

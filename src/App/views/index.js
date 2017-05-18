@@ -2,5 +2,6 @@
 module.exports = {
     MainLayout: require('./layout/MainLayout'),
     Placeholder: require('./placeholders/Placeholder'),
-    PageTitle: require('./PageContent/PageTitle')
+    PageTitle: require('./PageContent/PageTitle'),
+    HeaderTop: require('./Sublayouts/HeaderTop')
 };

@@ -3,6 +3,7 @@ var PropTypes = require('prop-types');
 
 var Placeholder = React.createClass({
     defaultProps: {
+        placeholder: null,
         placeholderKey: 'not set',
         isDynamic: false
     },
@@ -17,7 +18,7 @@ var Placeholder = React.createClass({
         // any of the static front end code in the file.
         //
         // TODO: Workout Dynamic Placholders here.... they will have a guid
-        if (this.props.hasOwnProperty('placeholder')) {
+        if (this.props.hasOwnProperty('placeholder') && this.props.placeholder != null) {
             return this.renderSitecore();
         } else {
             return this.renderFED();
@@ -31,7 +32,7 @@ var Placeholder = React.createClass({
                 return this.renderFED();
             }
             return (
-                <div>{this.props.placeholder.$Id[this.props.placeholderKey]}</div>
+                <div dangerouslySetInnerHTML={{ __html: this.props.placeholder.$Id[this.props.placeholderKey]}}></div>
             )
         }
 
@@ -39,7 +40,7 @@ var Placeholder = React.createClass({
             return this.renderFED();
         }
         return (
-            <div>{this.props.placeholder[this.props.placeholderKey]}</div>
+            <div dangerouslySetInnerHTML={{ __html: this.props.placeholder[this.props.placeholderKey]}}></div>
         );
     },
     renderFED() {

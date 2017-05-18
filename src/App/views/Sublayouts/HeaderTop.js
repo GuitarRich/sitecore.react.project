@@ -11,13 +11,13 @@ var HeaderTop = React.createClass({
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 hidden-xs">
-                            <Placeholder placeholderKey={'left-header-top'}>
+                            <Placeholder placeholderKey={'left-header-top'} placeholder={this.props.placeholder}>
                                 <LinkMenu data={Data.getSocialMenu()} isSocial={true} />
                             </Placeholder>
                         </div>
                         <div class="col-md-6 hidden-xs">
                             <div class="pull-right">
-                                <Placeholder placeholderKey={'right-header-top'}>
+                                <Placeholder placeholderKey={'right-header-top'} placeholder={this.props.placeholder}>
                                     <LinkMenu data={Data.getTopMenu()} isSocial={false} />
                                 </Placeholder>
                             </div>

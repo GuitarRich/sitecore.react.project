@@ -7,7 +7,7 @@ var OneColumn = React.createClass({
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <Placeholder placeholderKey={'col-huge'} isDynamic={true} content={this.props.children} />
+                        <Placeholder placeholderKey={'col-huge'} isDynamic={true} content={this.props.children} placeholder={this.props.placeholder} />
                     </div>
                 </div>
             </div>

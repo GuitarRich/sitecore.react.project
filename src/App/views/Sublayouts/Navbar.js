@@ -19,17 +19,17 @@ var Navbar = React.createClass({
                             <span class="icon-bar"></span>
                         </button>
 
-                        <Placeholder placeholderKey={'navbar-left'}>
+                        <Placeholder placeholderKey={'navbar-left'} placeholder={this.props.placeholder}>
                             <Logo data={Data.getLogo()} />
                         </Placeholder>
                     </div>
                     <div class="navbar-center">
-                        <Placeholder placeholderKey={'navbar-center'}>
+                        <Placeholder placeholderKey={'navbar-center'} placeholder={this.props.placeholder}>
                             <PrimaryMenu data={Data.getPrimaryNav()} />
                         </Placeholder>
                     </div>
                     <div class="navbar-right">
-                        <Placeholder placeholderKey={'navbar-right'}>
+                        <Placeholder placeholderKey={'navbar-right'} placeholder={this.props.placeholder}>
                             <ActivityNavigation />
                         </Placeholder>
                     </div>

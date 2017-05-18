@@ -5,7 +5,7 @@ var PageHeader = React.createClass({
     render() {
         return (
             <section class="section section-full @Model.Rendering.GetBackgroundClass()">
-                <Placeholder placeholderKey={'section'} isDynamic={true} content={this.props.children} />
+                <Placeholder placeholderKey={'section'} isDynamic={true} content={this.props.children} placeholder={this.props.placeholder} />
             </section>
         );
     }
