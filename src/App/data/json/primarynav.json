@@ -32,6 +32,12 @@
             ]
         },
         {
+            "Url": "/#/articles",
+            "Target": "",
+            "Title": "Articles",
+            "Children": []
+        },
+        {
             "Url": "/#/settings",
             "Target": "",
             "Title": "Settings",

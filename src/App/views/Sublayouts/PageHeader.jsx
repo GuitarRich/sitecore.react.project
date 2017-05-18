@@ -6,7 +6,9 @@ var PageHeader = React.createClass({
     render() {
         return (
             <header class="page-header">
-                <Placeholder placeholderKey={'page-header'} content={this.props.children} placeholder={this.props.placeholder}/>
+                <Placeholder placeholderKey={'page-header'} placeholder={this.props.placeholder}>
+                    {this.props.children}
+                </Placeholder>
             </header>
         );
     }

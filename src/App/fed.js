@@ -21,8 +21,8 @@ ReactDOM.render(
             <IndexRoute component={Home}></IndexRoute>
             <Route path="/about-react/introduction" component={AboutReactIntro}></Route>
             <Route path="/about-react/getting-started" component={AboutReactGettingStarted}></Route>
-            <Route path="/featured" component={Featured}></Route>
-            <Route path="/settings" component={Featured}></Route>
+            <Route path="/articles" component={Featured}></Route>
+            <Route path="/settings" component={Settings}></Route>
         </Route>
     </Router>, 
 app);

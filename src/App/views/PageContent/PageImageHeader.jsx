@@ -7,7 +7,9 @@ var PageImageHeader = React.createClass({
 
         return (
             <header class="page-header bg-media bg-parallax" style={backgroundImage}>
-                <Placeholder placeholderKey={'page-header'} content={this.props.children} />
+                <Placeholder placeholderKey={'page-header'} placeholder={this.props.placeholder}>
+                    {this.props.children}
+                </Placeholder>
             </header>
         );
     }
