@@ -17,7 +17,7 @@ var Placeholder = React.createClass({
         // any of the static front end code in the file.
         //
         // TODO: Workout Dynamic Placholders here.... they will have a guid
-        if (this.props.hasOwnProperty('placeholder')){
+        if (this.props.hasOwnProperty('placeholder')) {
             return this.renderSitecore();
         } else {
             return this.renderFED();
@@ -26,11 +26,18 @@ var Placeholder = React.createClass({
     renderSitecore() {
         let self = this;
         if (this.props.isDynamic) {
+
+            if (this.props.placeholder.$Id[this.props.placeholderKey] == "") {
+                return this.renderFED();
+            }
             return (
-                <div>{this.props.placeholder.$Id[this.props.placeholderKey]}</div>    
+                <div>{this.props.placeholder.$Id[this.props.placeholderKey]}</div>
             )
         }
 
+        if (this.props.placeholder[this.props.placeholderKey] == "") {
+            return this.renderFED();
+        }
         return (
             <div>{this.props.placeholder[this.props.placeholderKey]}</div>
         );
@@ -48,8 +55,7 @@ var Placeholder = React.createClass({
 
             if (React.Children.count(this.props.content) > 0) {
                 content = React.Children.map(this.props.content, (child, i) => {
-                    if (child.props.hasOwnProperty('placeholderKey'))
-                    {
+                    if (child.props.hasOwnProperty('placeholderKey')) {
                         if (child.props.placeholderKey == self.props.placeholderKey) {
                             return child;
                         }
@@ -63,14 +69,13 @@ var Placeholder = React.createClass({
                 );
             }
 
-            return ( <h2>No Content</h2> );
+            return (<h2>No Content</h2>);
         }
         if (this.props.children) {
             let content = [];
             if (React.Children.count(this.props.children) > 0) {
                 content = React.Children.map(this.props.children, (child, i) => {
-                    if (child.props.hasOwnProperty('placeholderKey'))
-                    {
+                    if (child.props.hasOwnProperty('placeholderKey')) {
                         if (child.props.placeholderKey == self.props.placeholderKey) {
                             return child;
                         }

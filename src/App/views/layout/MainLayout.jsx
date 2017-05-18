@@ -1,13 +1,14 @@
 var React = require("react");
 var Placeholder = require("./../placeholders/Placeholder");
+var HeaderTop = require("./../Sublayouts/HeaderTop");
 
 var MainLayout = React.createClass({
     render() {
         return (
             <div id="main-container">
                 <header class="header-static">
-                    <Placeholder placeholderKey={'header'}>
-                        <h1>header</h1>
+                    <Placeholder placeholderKey={'header-top'} placeholder={this.props.placeholder}>
+                        <HeaderTop />
                     </Placeholder>
                 </header>
 
