@@ -44,6 +44,7 @@ var PrimaryMenu = React.createClass({
 
         return (
             <div class="collapse navbar-collapse" id="siteNavbar">
+                <h1>Demo</h1>
                 <ul class="nav navbar-nav">
                     {navigation}
                 </ul>

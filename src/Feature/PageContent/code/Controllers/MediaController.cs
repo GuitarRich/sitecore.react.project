@@ -40,11 +40,6 @@ namespace Sitecore.Feature.PageContent.Controllers
                 })
             };
 
-            if (viewModel.Slides.Any())
-            {
-                viewModel.Slides.First().Active = "active";
-            }
-
             return this.React("PageHeaderCarousel", viewModel);
         }
 
