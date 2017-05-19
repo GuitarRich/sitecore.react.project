@@ -176,10 +176,6 @@
     <Content Include="App_Config\Include\Feature\Feature.Identity.Serialization.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <Content Include="Views\Identity\Logo.cshtml" />
-    <None Include="Views\Web.config" />
-    <Content Include="Views\Identity\Copyright.cshtml" />
-    <Content Include="Views\Identity\ContactInformation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -196,6 +192,7 @@
   <ItemGroup>
     <Compile Include="Controllers\IdentityController.cs" />
     <Compile Include="Model\ILogo.cs" />
+    <Compile Include="Model\LogoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Configurator.cs" />
     <Compile Include="Templates.cs" />
@@ -205,6 +202,10 @@
       <Project>{a44d104f-02fc-4f13-8f78-c265e861b572}</Project>
       <Name>Sitecore.React</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Orm\code\Sitecore.Foundation.Orm.csproj">
+      <Project>{80213F24-577F-4F0B-A3B8-62485EA4D2F3}</Project>
+      <Name>Sitecore.Foundation.Orm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Web\code\Sitecore.Foundation.Web.csproj">
       <Project>{A0DA2A44-CC4B-424C-AA1B-1276F8FF1E0F}</Project>
       <Name>Sitecore.Foundation.Web</Name>
@@ -212,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

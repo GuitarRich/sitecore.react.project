@@ -35,5 +35,10 @@ namespace Sitecore.React.SampleProject.Website.Controllers
         {
             return this.React("Section");
         }
-   }
+
+        public ActionResult ActivityNavigation()
+        {
+            return this.React("ActivityNavigation");
+        }
+    }
 }

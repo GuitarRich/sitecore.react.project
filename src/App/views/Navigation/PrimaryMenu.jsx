@@ -10,7 +10,7 @@ var PrimaryMenu = React.createClass({
         var menu = [];
 
         items.map(function(item, index){
-            if (item.Children.length > 0) {
+            if (item.Children.Items && item.Children.Items.length > 0) {
                 menu.push(self.renderParentWithChildren(item, index));
             } else {
                 menu.push(self.renderParentNoChildren(item, index));
@@ -33,7 +33,7 @@ var PrimaryMenu = React.createClass({
                     {item.Title}<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    {this.renderMenuItems(item.Children)}
+                    {this.renderMenuItems(item.Children.Items)}
                 </ul>
             </li>
         );

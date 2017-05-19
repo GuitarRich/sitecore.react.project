@@ -32,5 +32,27 @@ namespace Sitecore.Feature.PageContent.Controllers
 
             return this.React("PageTitle", viewModel);
         }
+
+        public ActionResult PageBody()
+        {
+            var pageData = _scContext.GetCurrentItem<IPageBody>();
+            var viewModel = new PageBodyViewModel
+            {
+                Body = _builder.BuildHtmlString(pageData, p => p.Body).ToString()
+            };
+
+            return this.React("PageBody", viewModel);
+        }
+
+        public ActionResult PageImageHeader()
+        {
+            var pageData = _scContext.GetCurrentItem<IPageImageHeader>();
+            var viewModel = new PageImageHeaderViewModel
+            {
+                ImageUrl = pageData.Image.Src
+            };
+
+            return this.React("PageImageHeader", viewModel);
+        }
     }
 }

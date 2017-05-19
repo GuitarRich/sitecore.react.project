@@ -4,6 +4,8 @@ var PropTypes = require('prop-types');
 var Placeholder = React.createClass({
     defaultProps: {
         placeholder: null,
+        isSitecore: false,
+        isEditing: false,
         placeholderKey: 'not set',
         isDynamic: false
     },
@@ -16,9 +18,8 @@ var Placeholder = React.createClass({
         // If we have a props object called "placeholder" this is supplied by 
         // Sitecore so return the value in the placeholder key and ignore 
         // any of the static front end code in the file.
-        //
-        // TODO: Workout Dynamic Placholders here.... they will have a guid
-        if (this.props.hasOwnProperty('placeholder') && this.props.placeholder != null) {
+
+        if (this.props.hasOwnProperty('placeholder') && this.props.placeholder != null){
             return this.renderSitecore();
         } else {
             return this.renderFED();
@@ -27,18 +28,11 @@ var Placeholder = React.createClass({
     renderSitecore() {
         let self = this;
         if (this.props.isDynamic) {
-
-            if (this.props.placeholder.$Id[this.props.placeholderKey] == "") {
-                return this.renderFED();
-            }
             return (
                 <div dangerouslySetInnerHTML={{ __html: this.props.placeholder.$Id[this.props.placeholderKey]}}></div>
             )
         }
 
-        if (this.props.placeholder[this.props.placeholderKey] == "") {
-            return this.renderFED();
-        }
         return (
             <div dangerouslySetInnerHTML={{ __html: this.props.placeholder[this.props.placeholderKey]}}></div>
         );

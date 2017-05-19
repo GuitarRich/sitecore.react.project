@@ -191,10 +191,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Controllers\PageContentController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Model\CarouselSlideViewModel.cs" />
+    <Compile Include="Model\CarouselViewModel.cs" />
+    <Compile Include="Model\ICarousel.cs" />
+    <Compile Include="Model\IMediaImage.cs" />
+    <Compile Include="Model\IPageBody.cs" />
+    <Compile Include="Model\IPageImageHeader.cs" />
     <Compile Include="Model\IPageTitle.cs" />
+    <Compile Include="Model\LanguageModel.cs" />
+    <Compile Include="Model\PageBodyViewModel.cs" />
+    <Compile Include="Model\PageImageHeaderViewModel.cs" />
     <Compile Include="Model\PageTitleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\LanguageFactory.cs" />
     <Compile Include="Services\Configurator.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
@@ -212,9 +225,7 @@
       <Name>Sitecore.Foundation.Web</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

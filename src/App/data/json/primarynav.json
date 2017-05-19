@@ -4,44 +4,44 @@
             "Url": "/#/",
             "Target": "",
             "Title": "Home",
-            "Children": []
+            "Children": { "Items": [] }
         },
         {
             "Url": "/#/about-react",
             "Target": "",
             "Title": "About React",
-            "Children": [
+            "Children": { "Items": [
                 {
                     "Url": "/#/about-react/introduction",
                     "Target": "",
                     "Title": "Introduction",
-                    "Children": []
+                    "Children": { "Items": [] }
                 },
                 {
                     "Url": "/#/about-react/getting-started",
                     "Target": "",
                     "Title": "Getting Started",
-                    "Children": []
+                    "Children": { "Items": [] }
                 },
                 {
                     "Url": "https://github.com/GuitarRich/sitecore.react",
                     "Target": "_blank",
                     "Title": "Git-Hub Repo",
-                    "Children": []
+                    "Children": { "Items": [] }
                 }
-            ]
+            ]}
         },
         {
             "Url": "/#/articles",
             "Target": "",
             "Title": "Articles",
-            "Children": []
+            "Children": { "Items": []}
         },
         {
             "Url": "/#/settings",
             "Target": "",
             "Title": "Settings",
-            "Children": []
+            "Children": { "Items": [] }
         }
     ]
 }

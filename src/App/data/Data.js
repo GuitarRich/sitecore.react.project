@@ -34,21 +34,21 @@ class Data {
     }
     static getSocialMenu() {
         return {
-            "isSocial": true,
-            "links": [
-                { "url": "http://facebook.com/sitecore", "target": "_blank", "title": "Facebook", "class": "facebook"},
-                { "url": "http://twitter.com/sitecore", "target": "_blank", "title": "Twitter", "class": "twitter"},
-                { "url": "https://www.youtube.com/user/sitecorechannel", "target": "_blank", "title": "YouTube", "class": "youtube"}
+            "IsSocial": true,
+            "Items": [
+                { "Url": "http://facebook.com/sitecore", "Target": "_blank", "Title": "Facebook", "Class": "facebook"},
+                { "Url": "http://twitter.com/sitecore", "Target": "_blank", "Title": "Twitter", "Class": "twitter"},
+                { "Url": "https://www.youtube.com/user/sitecorechannel", "Target": "_blank", "Title": "YouTube", "Class": "youtube"}
             ]
         };
     }
     static getTopMenu() {
         return {
-            "isSocial": false,
-            "links": [
-                { "url": "https://github.com/Sitecore/Habitat/", "target": "_blank", "title": "Habitat", "class": ""},
-                { "url": "http://helix.sitecore.net", "target": "_blank", "title": "Helix", "class": ""},
-                { "url": "https://www.sitecore.net", "target": "_blank", "title": "Sitecore.net", "class": ""}
+            "IsSocial": false,
+            "Items": [
+                { "Url": "https://github.com/Sitecore/Habitat/", "Target": "_blank", "Title": "Habitat", "Class": ""},
+                { "Url": "http://helix.sitecore.net", "Target": "_blank", "Title": "Helix", "Class": ""},
+                { "Url": "https://www.sitecore.net", "Target": "_blank", "Title": "Sitecore.net", "Class": ""}
             ]
         };
     }

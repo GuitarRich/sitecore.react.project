@@ -2,31 +2,28 @@
 @using Sitecore.React.Configuration
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sitecore React | Front End Files</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet">
+    <title>Sitecore React | BED</title>
+    <link href="/styles/vendor.min.css" rel="stylesheet" />
+    <link href="/styles/niteflight.min.css" rel="stylesheet" />
 
     <!-- Custom Fonts -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-</head>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js"></script>
+    <script src="@Url.Content(ReactSettingsProvider.Current.ClientScript)"></script>
+
+</head>
 <body>
 
     @Html.Sitecore().Placeholder("app")
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js"></script>
-    <script src="@Url.Content(ReactSettingsProvider.Current.BundleName)"></script>
-    @Html.ReactInitJavaScript()
-
 </body>
-
 </html>

@@ -6,8 +6,12 @@ var PageHeaderCarousel = React.createClass({
         let indicators = [];
         let self = this;
         slides.map(function (slide, index) {
+            let active = "active";
+            if (index > 0) {
+                active = "";
+            }
             indicators.push(
-                <li data-target={carouselId} data-slide-to={index} class={slide.Active} key={index}></li>
+                <li data-target={carouselId} data-slide-to={index} class={active} key={index}></li>
             );
         });
 
@@ -17,7 +21,11 @@ var PageHeaderCarousel = React.createClass({
         let slides = [];
         let self = this;
         items.map(function (slide, index) {
-            let cssClass = "item " + slide.Active;
+            let active = "active";
+            if (index > 0) {
+                active = "";
+            }
+            let cssClass = "item " + active;
             let backgroundImage = { backgroundImage: "url('" + slide.ImageUrl + "')" };
 
             slides.push(
@@ -26,7 +34,7 @@ var PageHeaderCarousel = React.createClass({
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h1 dangerouslySetInnerHTML={{ __html:slide.Title }}></h1>
+                                    <h1 dangerouslySetInnerHTML={{ __html: slide.Title }}></h1>
                                     <p class="lead" dangerouslySetInnerHTML={{ __html: slide.Description }}></p>
                                 </div>
                             </div>

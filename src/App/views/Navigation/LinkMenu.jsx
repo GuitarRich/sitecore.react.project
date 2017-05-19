@@ -5,22 +5,22 @@ var LinkMenu = React.createClass({
         var self = this;
 
         var cssClass = 'nav nav-service navbar-nav';
-        if (this.props.data.isSocial) {
+        if (this.props.data.IsSocial) {
             cssClass += ' nav-social';
         } else {
             cssClass += ' nav-pills';
         }
 
-        var navItems = this.props.data.links.map(function(link, index){
+        var navItems = this.props.data.Items.map(function(link, index){
             var btnClass = 'btn';
             var icon = '';
-            if (self.props.data.isSocial){
-                btnClass += ' btn-social-icon btn-' + link.class;
-                icon = "fa fa-" + link.class;
+            if (self.props.data.IsSocial){
+                btnClass += ' btn-social-icon btn-' + link.Class;
+                icon = "fa fa-" + link.Class;
 
                 return (
                     <li class="" key={index}>
-                        <a href={link.url} target={link.target} title={link.title} class={btnClass}>
+                        <a href={link.Url} target={link.Target} title={link.Title} class={btnClass}>
                             <span class={icon}></span>
                         </a>
                     </li>
@@ -28,7 +28,7 @@ var LinkMenu = React.createClass({
             } else {
                 return (
                     <li class="" key={index}>
-                        <a href={link.url} target={link.target} title={link.title} dangerouslySetInnerHTML={{__html: link.title}}></a>
+                        <a href={link.Url} target={link.Target} title={link.Title} dangerouslySetInnerHTML={{__html: link.Title}}></a>
                     </li>
                 );
             }
