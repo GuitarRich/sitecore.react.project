@@ -91,6 +91,12 @@ gulp.task("06-Deploy-Transforms", function() {
         .pipe(gulp.dest(config.websiteRoot + "/temp/transforms"));
 });
 
+gulp.task("07-Publish-All-FrontEnd", function(callback) {
+    return runSequence(
+        "Run-Webpack",
+        "Publish-All-JSX", callback);
+});
+
 /*****************************
   Copy assemblies to all local projects
 *****************************/
@@ -226,10 +232,11 @@ gulp.task("Publish-All-Views", function() {
 
 gulp.task("Run-Webpack", function () {
     var files = ["./src/app/fed.js", "./src/app/client.js", "./src/app/server.js"];
+    var destination = config.scriptRoot;
 
     return gulp.src(files)
         .pipe(webpack( require("./webpack.config.js") ))
-        .pipe(gulp.dest("dist/"));
+        .pipe(gulp.dest(destination));
 });
 
 gulp.task("Publish-All-JSX", function () {
@@ -253,7 +260,7 @@ gulp.task("Publish-All-JS", function () {
     var root = "./src";
     var roots = [root + "/**/App"];
     var files = "/*.min.js";
-    var destination = config.websiteRoot;
+    var destination = config.scriptRoot;
     return gulp.src(roots, { base: root }).pipe(
         foreach(function (stream, file) {
             console.log("Publishing from " + file.path);

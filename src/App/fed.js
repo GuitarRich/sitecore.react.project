@@ -5,7 +5,8 @@ require('jquery-ui');
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, IndexRoute, hashHistory, browserHistory } from "react-router"
+import { Router, Route, IndexRoute, hashHistory, browserHistory } from "react-router";
+import Placeholder from "sitecore.react.placeholders";
 
 import Layout from "./views/layout/MainLayout";
 import Home from "./pages/Home"

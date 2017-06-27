@@ -1,8 +1,7 @@
 var React = require("react");
-var Placeholder = require("./../placeholders/Placeholder");
+var Placeholder = require("sitecore.react.placeholders");
 var HeaderTop = require("./../Sublayouts/HeaderTop");
 var Navbar = require("./../Sublayouts/Navbar");
-
 
 var MainLayout = React.createClass({
     render() {

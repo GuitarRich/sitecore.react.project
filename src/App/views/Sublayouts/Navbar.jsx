@@ -1,5 +1,5 @@
 var React = require("react");
-var Placeholder = require("./../placeholders/Placeholder");
+var Placeholder = require("sitecore.react.placeholders");
 
 var Data = require("./../../data/Data").Data;
 var Logo = require("./../Identity/Logo");

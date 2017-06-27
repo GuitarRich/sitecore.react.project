@@ -95,6 +95,9 @@
       <HintPath>..\..\..\..\packages\Sitecore.Mvc.NoReferences.8.2.161221\lib\NET452\Sitecore.Mvc.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.React, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Sitecore.React.2.0.0\lib\net452\Sitecore.React.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.IO.Compression" />
@@ -159,9 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Website\Layouts\Default.cshtml" />
-    <Content Include="App_Config\Include\Sitecore.React\Sitecore.React.config" />
     <Content Include="App_Config\Include\Project\React.Website.config" />
     <Content Include="App_Config\Include\Project\z.React.DevSettings.config" />
+    <Content Include="App_Config\Include\Sitecore.React\Sitecore.React.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -186,10 +189,6 @@
     <Folder Include="Views\Layout\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\sitecore.react\src\Sitecore.React\Sitecore.React.csproj">
-      <Project>{a44d104f-02fc-4f13-8f78-c265e861b572}</Project>
-      <Name>Sitecore.React</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Web\code\Sitecore.Foundation.Web.csproj">
       <Project>{a0da2a44-cc4b-424c-aa1b-1276f8ff1e0f}</Project>
       <Name>Sitecore.Foundation.Web</Name>
